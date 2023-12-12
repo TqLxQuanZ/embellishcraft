@@ -10,6 +10,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class FancyTableBlock extends TableBlock
 {
     protected static final VoxelShape plate = Block.box(0.0D, 12.0D, 0.0D, 16.0D, 16.0D, 16.0D);

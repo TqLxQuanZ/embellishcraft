@@ -35,6 +35,8 @@ import tv.mapper.mapperbase.world.level.block.CustomBlock;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class LampBlock extends CustomBlock implements SimpleWaterloggedBlock
 {
     public static final BooleanProperty LIT = RedstoneTorchBlock.LIT;

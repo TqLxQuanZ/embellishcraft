@@ -22,6 +22,8 @@ import tv.mapper.mapperbase.world.level.block.CustomBlock;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class TerraceTableBlock extends CustomBlock implements SimpleWaterloggedBlock
 {
     private static final VoxelShape TABLE_TOP = Block.box(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);

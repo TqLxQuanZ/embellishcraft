@@ -22,6 +22,8 @@ import tv.mapper.mapperbase.world.level.block.CustomBlock;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class TableBlock extends CustomBlock implements SimpleWaterloggedBlock
 {
     public static final BooleanProperty TABLE_NORTH = BooleanProperty.create("table_north");

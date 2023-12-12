@@ -1,5 +1,5 @@
 package tv.mapper.embellishcraft.furniture.data.gen;
-
+import java.util.Objects;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.DyeColor;
@@ -13,6 +13,7 @@ import net.minecraftforge.client.model.generators.ModelFile.UncheckedModelFile;
 import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import tv.mapper.embellishcraft.core.data.gen.ECBlockStates;
 import tv.mapper.embellishcraft.core.util.McWoods;
 import tv.mapper.embellishcraft.furniture.world.level.block.CouchBlock;
@@ -77,9 +78,7 @@ public class FurnitureBlockStates extends ECBlockStates
      */
     private void tableBlock(Block block)
     {
-
-        String raw[] = block.getRegistryName().toString().split(":");
-        String name = raw[1];
+        String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
         MultiPartBlockStateBuilder builder = getMultipartBuilder(block).part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_top")).addModel().end();
         builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_foot")).uvLock(true).addModel().condition(TableBlock.TABLE_NORTH, true).end();
         builder.part().modelFile(new UncheckedModelFile(mod_id + ":block/" + name + "_foot")).rotationY(90).uvLock(true).addModel().condition(TableBlock.TABLE_EAST, true).end();
@@ -95,8 +94,7 @@ public class FurnitureBlockStates extends ECBlockStates
 
     private void couchBlock(CouchBlock block, int offset)
     {
-        String raw[] = block.getRegistryName().toString().split(":");
-        String name = raw[1];
+        String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
         MultiPartBlockStateBuilder builder = getMultipartBuilder(block);
 
         for(Direction dir : Direction.Plane.HORIZONTAL)
@@ -116,8 +114,7 @@ public class FurnitureBlockStates extends ECBlockStates
 
     private void bedBlock(BedBlock block, int offset)
     {
-        String raw[] = block.getRegistryName().toString().split(":");
-        String name = raw[1];
+        String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
         VariantBlockStateBuilder builder = getVariantBuilder(block);
         String model;
 
@@ -135,8 +132,7 @@ public class FurnitureBlockStates extends ECBlockStates
     @SuppressWarnings("unused")
     private void chestBlock(ChestBlock block, int offset)
     {
-        String raw[] = block.getRegistryName().toString().split(":");
-        String name = raw[1];
+        String name = Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block)).getPath();
         VariantBlockStateBuilder builder = getVariantBuilder(block);
         String model;
 

@@ -31,6 +31,8 @@ import tv.mapper.mapperbase.world.level.block.CustomBlock;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class ChairBlock extends CustomBlock implements SimpleWaterloggedBlock, SitBlock
 {
     // Need to figure a way to rotate VoxelShapes because this is just stupid

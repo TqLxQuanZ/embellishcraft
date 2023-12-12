@@ -17,6 +17,8 @@ import net.minecraft.world.phys.AABB;
 import net.minecraftforge.network.NetworkHooks;
 import tv.mapper.embellishcraft.furniture.world.level.block.SitBlock;
 
+import net.minecraft.world.entity.Entity.RemovalReason;
+
 public class SitEntity extends Entity
 {
     public SitEntity(Level pLevel)

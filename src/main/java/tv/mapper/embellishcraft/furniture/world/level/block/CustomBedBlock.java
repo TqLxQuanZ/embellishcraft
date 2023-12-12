@@ -21,6 +21,8 @@ import tv.mapper.mapperbase.world.level.block.ToolManager;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class CustomBedBlock extends BedBlock implements ToolManager
 {
     protected final WoodsType wood;

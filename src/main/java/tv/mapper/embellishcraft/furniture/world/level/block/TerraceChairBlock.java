@@ -11,6 +11,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class TerraceChairBlock extends ChairBlock
 {
     // Need to figure a way to rotate VoxelShapes because this is just stupid

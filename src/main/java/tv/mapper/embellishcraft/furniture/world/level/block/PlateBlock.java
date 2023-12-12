@@ -30,6 +30,8 @@ import tv.mapper.mapperbase.world.level.block.CustomBlock;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class PlateBlock extends CustomBlock implements SimpleWaterloggedBlock
 {
     public static final IntegerProperty PLATES = IntegerProperty.create("plates", 1, 8);

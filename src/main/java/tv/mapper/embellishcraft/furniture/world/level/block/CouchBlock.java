@@ -35,6 +35,8 @@ import tv.mapper.mapperbase.world.level.block.CustomBlock;
 import tv.mapper.mapperbase.world.level.block.ToolTiers;
 import tv.mapper.mapperbase.world.level.block.ToolTypes;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class CouchBlock extends CustomBlock implements SimpleWaterloggedBlock, SitBlock
 {
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
@@ -301,6 +303,7 @@ public class CouchBlock extends CustomBlock implements SimpleWaterloggedBlock, S
      * 
      * @deprecated call via {@link IBlockState#withMirror(Mirror)} whenever possible. Implementing/overriding is fine.
      */
+    @Override
     public BlockState mirror(BlockState state, Mirror mirrorIn)
     {
         Direction direction = state.getValue(FACING);
